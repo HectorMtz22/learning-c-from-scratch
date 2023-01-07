@@ -20,7 +20,7 @@ int main() {
         }
     }
     if (max > 0) {
-        printf("%s\n", longest);
+        printf("\nTotal characters on the line: %d\n%s\n", max, longest);
     }
     return 0;
 }

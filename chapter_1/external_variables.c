@@ -5,6 +5,10 @@ int max = 0;
 char line[BUFFER];
 char longest[BUFFER];
 
+/*
+    ? It's a great idea that you put 'void' inside the declaration of the function
+    ? If you omit this, you won't get an error whether you pass a parameter or not.
+*/
 int getlines(void);
 void copy(void);
 

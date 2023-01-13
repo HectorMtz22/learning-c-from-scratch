@@ -2,7 +2,7 @@
 #include <string.h>
 #define BUFFER 1000
 
-int lower(char c);
+int lower(int c);
 
 int main() {
     char line[BUFFER];
@@ -20,7 +20,7 @@ int main() {
     return 0;
 }
 
-int lower(char c) {
+int lower(int c) {
     if (c >= 'A' && c <= 'Z') {
         return c + 'a' - 'A';
     }

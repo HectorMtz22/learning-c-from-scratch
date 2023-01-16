@@ -1,11 +1,34 @@
 #include <stdio.h>
+#define BITS 16
 
 unsigned int getbits(unsigned, int, int);
 
-int main() {
-    unsigned x = 0777;
+void print_bits(unsigned number) {
+    int i = BITS - 1;
+    int bits[BITS];
 
-    printf("The result is: %u\n", getbits(x, 4, 3));
+    for (int i = 0; i < BITS; i++) {
+        bits[i] = 0;
+    }
+
+    while (number >= 2) {
+        bits[i--] = number % 2;
+        number /= 2;
+    }
+    bits[i--] = 1;
+
+    for (int i = 0; i < BITS; i++) {
+        printf("%d", bits[i]);
+        if (i == 7) printf(" ");
+    }
+} 
+
+int main() {
+    unsigned x = 16;
+
+    printf("Number %d in bits: ", x);
+    print_bits(x);
+    printf("\nThe result is: %u\n", getbits(x, 4, 3));
 
 }
 

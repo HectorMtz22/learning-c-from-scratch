@@ -1,5 +1,10 @@
 #include <stdio.h> // printf, scanf
+#include <string.h> // strlen
 #define BUFFER 1000
+
+int lower(int c) {
+    return (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c;
+}
 
 int main() {
     char line[BUFFER];

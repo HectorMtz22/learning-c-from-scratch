@@ -17,7 +17,7 @@ void escape(char s[], char t[]) {
     int length = strlen(t);
     int i = 0;
     for (int j = 0; j < length; j++) {
-        switch (t[i]) {
+        switch (t[j]) {
         case '\n':
             s[i++] = '\\';
             s[i++] = 'n';

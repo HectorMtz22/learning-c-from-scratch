@@ -11,14 +11,15 @@ void reverse(char s[]) {
     }
 }
 
-int main() {
-    int string[1000];
-    printf("Enter a string: ");
-    scanf("%s", string);
+// use like this:
+// int main() {
+//     int string[1000];
+//     printf("Enter a string: ");
+//     scanf("%s", string);
 
-    reverse((char *) string);
+//     reverse((char *) string);
 
-    printf("The string reversed is: %s\n", string);
+//     printf("The string reversed is: %s\n", string);
     
-    return 0;
-}
+//     return 0;
+// }

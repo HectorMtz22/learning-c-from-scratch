@@ -10,7 +10,11 @@ void itob(int n, char s[], int b) {
     }
     i = 0;
     do {                    // generate digits in reverse order
-        s[i++] = n % b + '0'; 
+        if ((n % b) > 10) {
+            s[i++] = (n % b) - 10 + 'a';
+        } else {
+            s[i++] = n % b + '0'; 
+        }
     } while ((n /= b) > 0);// detete it
     if (sign < 0) {
         s[i++] = '-';
@@ -20,10 +24,10 @@ void itob(int n, char s[], int b) {
 }
 
 int main() {
-    int number = 0777;
+    int number = 0x1ff;
     char string[50];
 
-    itob(number, string, 8);
+    itob(number, string, 16);
 
     printf("%s\n", string);
     return 0;
